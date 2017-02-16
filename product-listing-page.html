@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Product Listing Page</title>
     <link rel="stylesheet" href="product-listing-page.css">
     <script src="https://use.fontawesome.com/7963fc1736.js"></script>
 </head>
+
 <body>
+
+    <!----------------------Page Navigation----------------------->
+
+    <div class=page-nav__container>
+      <ul class="page-nav__items">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+      <div class="shopping-cart-list">Shopping Cart</div>
+    </div>
+
+
+    <!----------------------Active Shopping Cart----------------------->
+
+
+    <div class="shopping-cart-wrapper">
+        <div class="shopping-cart-header">
+            <div class="shopping-cart-title">Shopping Cart</div>
+            <form id="active-shopping-cart">
+                <div class="shopping-cart-content">
+                    <div class="shopping-cart-list-head">
+                        <div class="shopping-cart-list-head__prod"></div>
+                        <div class="shopping-cart-list-head__price">Price</div>
+                        <div class="shopping-cart-list-head__quantity">Quantity</div>
+                    </div>
+
+                    <!---------Active Shopping Cart Items--------------->
+                    <div class="shopping-cart-item clearfix">
+                        <div class="shopping-cart-item-box">
+                            <div class="shopping-cart-item-image">
+                                <img src="http://placehold.it/115x115">
+                            </div>
+                            <div class="shopping-cart-item-name">Product Name</div>
+                            <div class="shopping-cart-item-description">
+                                <span>This is the description of the product.</span>
+                            </div>
+                            <div class="shopping-cart-item-action-links">
+                                <span><a href="#">Delete</a></span>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-item-price">$0.00</div>
+                        <div class="shopping-cart-item-quantity">
+                            <label for="item-quantity-1"></label>
+                            <select name="item-quantity-1" id="item-quantity-1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                                <option value="5">8</option>
+                                <option value="5">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="shopping-cart-item clearfix">
+                        <div class="shopping-cart-item-box">
+                            <div class="shopping-cart-item-image">
+                                <img src="http://placehold.it/115x115">
+                            </div>
+                            <div class="shopping-cart-item-name">Product Name</div>
+                            <div class="shopping-cart-item-description">
+                                <span>This is the description of the product.</span>
+                            </div>
+                            <div class="shopping-cart-item-action-links">
+                                <span><a href="#">Delete</a></span>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-item-price">$0.00</div>
+                        <div class="shopping-cart-item-quantity">
+                            <label for="item-quantity-2"></label>
+                            <select name="item-quantity-2" id="item-quantity-2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                                <option value="5">8</option>
+                                <option value="5">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="shopping-cart-item clearfix">
+                        <div class="shopping-cart-item-box">
+                            <div class="shopping-cart-item-image">
+                                <img src="http://placehold.it/115x115">
+                            </div>
+                            <div class="shopping-cart-item-name">Product Name</div>
+                            <div class="shopping-cart-item-description">
+                                <span>This is the description of the product.</span>
+                            </div>
+                            <div class="shopping-cart-item-action-links">
+                                <span><a href="#">Delete</a></span>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-item-price">$0.00</div>
+                        <div class="shopping-cart-item-quantity">
+                            <label for="item-quantity-3"></label>
+                            <select name="item-quantity-3" id="item-quantity-3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                                <option value="5">8</option>
+                                <option value="5">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="shopping-cart-coupon">
+                        <label for="coupon-code">Coupon Code: </label>
+                        <input id="coupon-code" type="text">
+                    </div>
+                    <div class="shopping-cart-subtotal">
+                        <label for="shopping-cart-subtotal">Subtotal: </label>
+                        <output id="shopping-cart-subtotal">$0.00</output>
+                    </div>
+                    <div class="shopping-cart-action-buttons">
+                        <button class="shopping-cart-secondary" type="submit">Keep Shopping</button>
+                        <button class="shopping-cart-primary" type="submit">Checkout</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
 
     <div class="prod-grid-wrapper">
@@ -20,11 +160,11 @@
                     <h2>NAV</h2>
                     <ul>
                         <li>Nav1</li>
-                            <ul>
-                                <li>Nav1.1</li>
-                                <li>Nav1.2</li>
-                                <li>Nav1.3</li>
-                            </ul>
+                        <ul>
+                            <li>Nav1.1</li>
+                            <li>Nav1.2</li>
+                            <li>Nav1.3</li>
+                        </ul>
                         <li>Nav2</li>
                         <li>Nav3</li>
                         <li>Nav4</li>
@@ -64,13 +204,13 @@
                             </div>
                             <div class="prod-grid-item-info">
                                 <div class="prod-grid-item-info-main">
-                                    Product Name
+                                    Product Name 1
                                 </div>
                                 <div class="prod-grid-item-info-description">
-                                    Product Description
+                                    Product Description 1
                                 </div>
                                 <div class="prod-grid-item-info-price">
-                                    $0.00
+                                    $1.00
                                 </div>
                                 <button class="prod-grid-item-primary" type="button">Add to Cart</button>
                             </div>
@@ -81,13 +221,13 @@
                             </div>
                             <div class="prod-grid-item-info">
                                 <div class="prod-grid-item-info-main">
-                                    Product Name
+                                    Product Name 2
                                 </div>
                                 <div class="prod-grid-item-info-description">
-                                    Product Description
+                                    Product Description 2
                                 </div>
                                 <div class="prod-grid-item-info-price">
-                                    $0.00
+                                    $2.00
                                 </div>
                                 <button class="prod-grid-item-primary" type="button">Add to Cart</button>
                             </div>
@@ -236,131 +376,7 @@
     </div>
 
     <hr>
-
-
-
-    <!----------------------Active Shopping Cart----------------------->
-
-    <div class="shopping-cart-wrapper">
-        <div class="shopping-cart-header">
-            <div class="shopping-cart-title">Shopping Cart</div>
-            <form id="active-shopping-cart">
-                <div class="shopping-cart-content">
-                    <div class="shopping-cart-list-head">
-                        <div class="shopping-cart-list-head__prod"></div>
-                        <div class="shopping-cart-list-head__price">Price</div>
-                        <div class="shopping-cart-list-head__quantity">Quantity</div>
-                    </div>
-
-                    <!---------Active Shopping Cart Items--------------->
-                    <div class="shopping-cart-item clearfix">
-                        <div class="shopping-cart-item-box">
-                            <div class="shopping-cart-item-image">
-                                <img src="http://placehold.it/115x115">
-                            </div>
-                            <div class="shopping-cart-item-name">Product Name</div>
-                            <div class="shopping-cart-item-description">
-                                <span>This is the description of the product.</span>
-                            </div>
-                            <div class="shopping-cart-item-action-links">
-                                <span><a href="#">Delete</a></span>
-                            </div>
-                        </div>
-                        <div class="shopping-cart-item-price">$0.00</div>
-                        <div class="shopping-cart-item-quantity">
-                            <label for="item-quantity-1"></label>
-                            <select name="item-quantity-1" id="item-quantity-1">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="5">6</option>
-                                <option value="5">7</option>
-                                <option value="5">8</option>
-                                <option value="5">9</option>
-                                <option value="10">10</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="shopping-cart-item clearfix">
-                        <div class="shopping-cart-item-box">
-                            <div class="shopping-cart-item-image">
-                                <img src="http://placehold.it/115x115">
-                            </div>
-                            <div class="shopping-cart-item-name">Product Name</div>
-                            <div class="shopping-cart-item-description">
-                                <span>This is the description of the product.</span>
-                            </div>
-                            <div class="shopping-cart-item-action-links">
-                                <span><a href="#">Delete</a></span>
-                            </div>
-                        </div>
-                        <div class="shopping-cart-item-price">$0.00</div>
-                        <div class="shopping-cart-item-quantity">
-                            <label for="item-quantity-2"></label>
-                            <select name="item-quantity-2" id="item-quantity-2">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="5">6</option>
-                                <option value="5">7</option>
-                                <option value="5">8</option>
-                                <option value="5">9</option>
-                                <option value="10">10</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="shopping-cart-item clearfix">
-                        <div class="shopping-cart-item-box">
-                            <div class="shopping-cart-item-image">
-                                <img src="http://placehold.it/115x115">
-                            </div>
-                            <div class="shopping-cart-item-name">Product Name</div>
-                            <div class="shopping-cart-item-description">
-                                <span>This is the description of the product.</span>
-                            </div>
-                            <div class="shopping-cart-item-action-links">
-                                <span><a href="#">Delete</a></span>
-                            </div>
-                        </div>
-                        <div class="shopping-cart-item-price">$0.00</div>
-                        <div class="shopping-cart-item-quantity">
-                            <label for="item-quantity-3"></label>
-                            <select name="item-quantity-3" id="item-quantity-3">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="5">6</option>
-                                <option value="5">7</option>
-                                <option value="5">8</option>
-                                <option value="5">9</option>
-                                <option value="10">10</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="shopping-cart-coupon">
-                        <label for="coupon-code">Coupon Code: </label>
-                        <input id="coupon-code" type="text">
-                    </div>
-                    <div class="shopping-cart-subtotal">
-                        <label for="shopping-cart-subtotal">Subtotal: </label>
-                        <output id="shopping-cart-subtotal">$0.00</output>
-                    </div>
-                    <div class="shopping-cart-action-buttons">
-                        <button class="shopping-cart-secondary" type="submit">Keep Shopping</button>
-                        <button class="shopping-cart-primary" type="submit">Checkout</button>
-
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
+    <script type="text/javascript" src="js/product-listing-page.js"></script>
 </body>
+
 </html>
