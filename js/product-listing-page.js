@@ -1,6 +1,7 @@
 var shoppingCartButton = document.querySelector(".shopping-cart-list");
 var shoppingCartWrapper = document.querySelector(".shopping-cart-wrapper");
 var productGrid = document.querySelector(".prod-grid-content");
+var deleteLink = document.querySelector(".shopping-cart-item-action-links>span>a");
 var cartCounter = 0; //@TODO - this should be part of a closure
 
 // Functions
@@ -14,8 +15,7 @@ function addToCart(event) {
     var productDesc = productInfo.querySelector(".prod-grid-item-info-description").textContent.trim();
     var productPrice = productInfo.querySelector(".prod-grid-item-info-price").textContent.trim();
 
-    var output = "<div class='shopping-cart-item clearfix'>" +
-                "<div class='shopping-cart-item-box'>" +
+    var output ="<div class='shopping-cart-item-box'>" +
                 "<div class='shopping-cart-item-image'><img src='http://placehold.it/115x115'></div>" +
                 "<div class='shopping-cart-item-name'>" + productName + "</div>" +
                 "<div class='shopping-cart-item-description'><span>" + productDesc + "</span></div>" +
@@ -36,8 +36,10 @@ function addToCart(event) {
                 "<option value='10'>10</option>" +
                 "</select></div>";
 
-    var list = document.querySelector('.shopping-cart-list-head');
+    var list = document.querySelector('.shopping-cart-items');
     var divNode = document.createElement("div");
+    shoppingCartWrapper.classList.remove('toggle-visibility');
+    divNode.className = "shopping-cart-item clearfix";
 
     divNode.innerHTML = output;
 
@@ -45,11 +47,31 @@ function addToCart(event) {
   }
 }
 
+function deleteFromCart(event) {
+  if (event.target.nodeName == "A") {
+    var cartItem = event.target.parentNode; // set eventParent to event target parent before traversal
+    var shoppingCartItems = document.querySelector(".shopping-cart-items");
+
+
+    while (!cartItem.classList.contains("shopping-cart-item")) {
+      cartItem = cartItem.parentNode;
+    }
+    // console.log(shoppingCartItems);
+    shoppingCartItems.removeChild(cartItem);
+  }
+}
 
 //EVENT LISTENERS
-productGrid.addEventListener('click', addToCart );
+productGrid.addEventListener('click', addToCart);
+
+shoppingCartWrapper.addEventListener('click', deleteFromCart);
 
 // Toggle shopping cart event listener
 shoppingCartButton.addEventListener('click', function(e) {
   shoppingCartWrapper.classList.toggle('toggle-visibility');
+  if (document.querySelector(".shopping-cart-items").children.length === 0){
+    document.querySelector(".shopping-cart-items").innerHTML = "<br /><h3>You have no items in your cart</h3>";
+  } else {
+    document.querySelector(".shopping-cart-items").innerHTML = "";
+  }
 });
