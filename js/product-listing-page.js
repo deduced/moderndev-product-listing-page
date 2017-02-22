@@ -5,12 +5,10 @@ var shoppingCartWrapper = document.querySelector(".shopping-cart-wrapper");
 var productGrid = document.querySelector(".prod-grid-content");
 var deleteLink = document.querySelector(".shopping-cart-item-action-links>span>a");
 var cartList = document.querySelector('.shopping-cart-items');
+var cartCoupon = document.querySelector('.shopping-cart-coupon');
 
 // create cart array to hold Items.
 var cart = [];
-
-// Discount code variable
-var discountCode;
 
 //Cart Item constructor
 var Item = function(name, description, price, quantity) {
@@ -220,5 +218,56 @@ shoppingCartButton.addEventListener('click', function() {
     cartElems.innerHTML = "<br /><h3>You have no items in your cart</h3>";
   } else {
     displayCart();
+  }
+});
+
+
+cartCoupon.addEventListener('click', function(event) {
+  function clearCouponCode() {
+    cartCouponInput.value = "";
+  }
+
+  if (event.target.nodeName === "BUTTON") {
+    event.preventDefault();
+    var cartSubtotal = document.querySelector("#shopping-cart-subtotal");
+    var cartCouponInput = document.querySelector('#coupon-code');
+    var couponCode = cartCouponInput.value.trim();
+    var currentSubtotal = cartSubtotal.value.slice(1);
+    var discountSubtotal;
+
+    console.log(currentSubtotal);
+
+    switch(couponCode) {
+      case "10off":
+        discountSubtotal = (totalCart() * 0.9).toFixed(2);
+        if (discountSubtotal < currentSubtotal) {
+          cartSubtotal.innerHTML = "$" + discountSubtotal;
+        } else {
+          alert("Your current subtotal is cheaper! Ignoring your discount code.");
+          clearCouponCode();
+        }
+        break;
+      case "20off":
+        discountSubtotal = (totalCart() * 0.8).toFixed(2);
+        if (discountSubtotal < currentSubtotal) {
+          cartSubtotal.innerHTML = "$" + discountSubtotal;
+        } else {
+          alert("Your current subtotal is cheaper! Ignoring your discount code.");
+          clearCouponCode();
+        }
+        break;
+      case "50off":
+        discountSubtotal = (totalCart() * 0.5).toFixed(2);
+        if (discountSubtotal < currentSubtotal) {
+          cartSubtotal.innerHTML = "$" + discountSubtotal;
+        } else {
+          alert("Your current subtotal is cheaper! Ignoring your discount code.");
+          clearCouponCode();
+        }
+        break;
+      default:
+        alert("Wrong coupon code! Try 10off, 20off or 50off");
+        clearCouponCode();
+    }
   }
 });
