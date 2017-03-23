@@ -89,14 +89,15 @@
         var output = "";
         for (var i in cart) {
             var id = Number(i) + 1;
-            output += "<div class='shopping-cart-item-box'>" +
+            output += "<div class='flexy-grid'>" +
+                "<div class='flexy-10 shopping-cart-item-box'>" +
                 "<div class='shopping-cart-item-image'><img src='http://placehold.it/100x100'></div>" +
                 "<div class='shopping-cart-item-name'>" + cart[i].name + "</div>" +
                 "<div class='shopping-cart-item-description'><span>" + cart[i].description + "</span></div>" +
                 "<div class='shopping-cart-item-action-links'><span><a href='#'>Delete</a></span></div>" +
                 "</div>" +
-                "<div class='shopping-cart-item-price'>" + cart[i].price.toFixed(2) + "</div>" +
-                "<div class='shopping-cart-item-quantity'><label for='cart-item-quantity-" + id + "'" + "></label>" +
+                "<div class='flexy-1 shopping-cart-item-price'>" + cart[i].price.toFixed(2) + "</div>" +
+                "<div class='flexy-1 shopping-cart-item-quantity'><label for='cart-item-quantity-" + id + "'" + "></label>" +
                 "<select name='cart-item-quantity-" + id + "'" + "id='cart-item-quantity-" + id + "'" + ">" +
                 "<option value='1'>1</option>" +
                 "<option value='2'>2</option>" +
@@ -108,7 +109,7 @@
                 "<option value='8'>8</option>" +
                 "<option value='9'>9</option>" +
                 "<option value='10'>10</option>" +
-                "</select></div>";
+                "</select></div></div>";
         }
 
         //create the cart outer div and add the cart item output as the HTML
@@ -120,7 +121,7 @@
             list.removeChild(list.lastChild);
         }
 
-        divNode.className = "shopping-cart-item clearfix";
+        divNode.className = "shopping-cart-item";
 
         divNode.innerHTML = output;
 

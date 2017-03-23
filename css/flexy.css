@@ -5,7 +5,6 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-/*@TODO - Flesh out using https://github.com/dhg/Skeleton as inspiration*/
 /* Container and Grid */
 
 .flexy-container {
@@ -24,8 +23,6 @@
 
 /* Columns */
 .flexy-col {
-  background-color: skyblue;
-  color: rgba(57, 21, 21, 1);
   padding: 20px;
   margin: 1em;
 }
@@ -84,6 +81,10 @@
   flex-wrap: nowrap;
 }
 
+.flexy-wrap {
+  flex-wrap: wrap;
+}
+
 .flexy-grow {
   flex-grow: 1;
 }
@@ -112,6 +113,10 @@
   width: 75%;
 }
 
+.flexy-w100 {
+  width: 100%;
+}
+
 .flexy-start {
   justify-content: flex-start;
 }
@@ -132,8 +137,15 @@
   justify-content: space-around;
 }
 
+.flexy-top {
+  align-items: flex-start;
+}
 .flexy-middle {
   align-items: center;
+}
+
+.flexy-bottom {
+  align-items: flex-end;
 }
 
 .flexy-reverse {
@@ -155,21 +167,12 @@
   .flexy-grid {
     display: block;
   }
+  .flexy-col {
+    margin: .5em;
+    padding: 10px;
+  }
+
+  .shopping-cart-wrapper {
+    margin: 0;
+  }
 }
-
-/* Mobile first queries @TODO flesh out media queries */
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}

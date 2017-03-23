@@ -12,286 +12,283 @@
 
 <body>
 
-<div class="flexy-container">
+    <div class="flexy-container">
+        <!----------------------Page Navigation----------------------->
+        <nav class="flexy-grid flexy-between">
+            <div class="flexy-col">
+                <ul class="flexy-grid">
+                    <li class="page-nav__item">Menu 1</li>
+                    <li class="page-nav__item">Menu 2</li>
+                    <li class="page-nav__item">Menu 3</li>
+                    <li class="page-nav__item">Menu 4</li>
+                </ul>
+            </div>
+            <div class="flexy-col shopping-cart-list">Shopping Cart</div>
+        </nav>
 
-
-    <!----------------------Page Navigation----------------------->
-    <nav class="flexy-grid flexy-between">
-        <div class="flexy-col">
-            <ul class="flexy-grid">
-                <li class="page-nav__item">Menu 1</li>
-                <li class="page-nav__item">Menu 2</li>
-                <li class="page-nav__item">Menu 3</li>
-                <li class="page-nav__item">Menu 4</li>
-            </ul>
-        </div>
-        <div class="flexy-col shopping-cart-list">Shopping Cart</div>
-    </nav>
-
-
-
-
- <!-- END CONTAINER -->
-</div>
-
-
-
-
-
-    <!----------------------Active Shopping Cart----------------------->
-    <!-- @TODO -- adapt the shopping-cart -->
-
-    <div class="shopping-cart-wrapper toggle-visibility">
-        <div class="shopping-cart-header">
-            <div class="shopping-cart-title">Shopping Cart</div>
-            <form id="active-shopping-cart">
-                <div class="shopping-cart-content">
-                    <div class="shopping-cart-list-head">
-                        <div class="shopping-cart-list-head__prod"></div>
-                        <div class="shopping-cart-list-head__price">Price</div>
-                        <div class="shopping-cart-list-head__quantity">Quantity</div>
-                    </div>
-
-                    <!---------Active Shopping Cart Items--------------->
-                    <div class="shopping-cart-items">
-
-                    </div>
-
-                    <div class="shopping-cart-coupon">
-                        <label for="coupon-code">Coupon Code: </label>
-                        <input id="coupon-code" type="text">
-                        <button class="shopping-cart-secondary" id="coupon-code-apply">Apply</button>
-                    </div>
-
-                    <div class="shopping-cart-subtotal">
-                        <label for="shopping-cart-subtotal">Subtotal: </label>
-                        <output id="shopping-cart-subtotal">$0.00</output>
-                    </div>
-                    <div class="shopping-cart-action-buttons">
-                        <button class="shopping-cart-secondary" type="submit">Keep Shopping</button>
-                        <button class="shopping-cart-primary" type="submit">Checkout</button>
-
-                    </div>
+        <!----------------------Active Shopping Cart----------------------->
+            <div class="shopping-cart-wrapper toggle-visibility">
+              <div class="flexy-grid flexy-w100 shopping-cart-header-border">
+                <div class="flexy-6 shopping-cart-header">
+                    <div class="shopping-cart-title">Shopping Cart</div>
                 </div>
-            </form>
+
+                <div class=" flexy-6 shopping-cart-list-head">
+                    <div class="shopping-cart-list-head__prod"></div>
+                    <div class="shopping-cart-list-head__price">Price</div>
+                    <div class="shopping-cart-list-head__quantity">Qty</div>
+                </div>
+              </div>
+
+              <form id="active-shopping-cart">
+                  <div class="shopping-cart-content">
+
+                      <!---------Active Shopping Cart Items--------------->
+                      <div class="shopping-cart-items">
+
+                      </div>
+
+                    <div class="shopping-cart-actions">
+                      <div class="shopping-cart-coupon">
+                          <label for="coupon-code">Coupon Code: </label>
+                          <input id="coupon-code" type="text">
+                          <button class="shopping-cart-secondary" id="coupon-code-apply">Apply</button>
+                      </div>
+                      <div class="shopping-cart-subtotal">
+                          <label for="shopping-cart-subtotal">Subtotal: </label>
+                          <output id="shopping-cart-subtotal">$0.00</output>
+                      </div>
+                      <div class="shopping-cart-action-buttons">
+                          <button class="shopping-cart-secondary" type="submit">Keep Shopping</button>
+                          <button class="shopping-cart-primary" type="submit">Checkout</button>
+
+                      </div>
+                    </div>
+
+
+                  </div>
+              </form>
         </div>
-    </div>
 
-
-
-    <div class="prod-grid-wrapper">
-
-        <div class="prod-grid">
+        <div class="flexy-grid">
 
             <!----------------------Nav and Filter Sidebar--------------------->
 
-            <div class="sidebar">
-                <div class="prod-grid-filters">
-                    <h2>FILTER</h2>
-                    <ul>
-                        <li>Filter1</li>
-                        <ul>
-                            <li>Filter1.1</li>
-                            <li>Filter1.2</li>
-                            <li>Filter1.3</li>
-                        </ul>
-                        <li>Filter2</li>
-                        <li>Filter3</li>
-                        <li>Filter4</li>
-                        <li>Filter5</li>
-                    </ul>
-                </div>
+            <div class="flexy-2 flexy-col prod-grid-filters">
+                <h2>FILTER</h2>
+                <ul>
+                    <li>Filter1</li>
+                    <li>Filter2</li>
+                    <li>Filter3</li>
+                    <li>Filter4</li>
+                    <li>Filter5</li>
+                </ul>
             </div>
 
             <!----------------------Product Listing Page----------------------->
-
-            <div class="prod-grid-content-wrapper">
-                <div class="prod-grid-header">
-                    <div class="prod-grid-header-title">HEADER TITLE</div>
-                    <div class="prod-grid-header-sort">
-                        <span>Sort By:</span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="prod-grid-content clearfix">
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 1
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description 1
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $1.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 2
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description 2
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $2.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 3
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $3.50
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 4
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 5
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 6
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 7
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 8
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 9
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="prod-grid-item">
-                            <div class="prod-grid-item-image">
-                                <img src="http://placehold.it/220x220">
-                            </div>
-                            <div class="prod-grid-item-info">
-                                <div class="prod-grid-item-info-main">
-                                    Product Name 10
-                                </div>
-                                <div class="prod-grid-item-info-description">
-                                    Product Description
-                                </div>
-                                <div class="prod-grid-item-info-price">
-                                    $0.00
-                                </div>
-                                <button class="prod-grid-item-primary" type="button">Add to Cart</button>
-                            </div>
+            <div class="flexy-10 flexy-col">
+                <div class="flexy-grid prod-grid-header">
+                    <div class="flexy-grid flexy-w100 flexy-middle flexy-between">
+                        <div class="prod-grid-header-title">HEADER TITLE</div>
+                        <div class="prod-grid-header-sort">
+                            <span>Sort By:</span>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
+                <div class="flexy-grid flexy-wrap flexy-center prod-grid-content">
 
-    <hr>
-    <script type="text/javascript" src="js/product-listing-page.js"></script>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 1
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description 1
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $1.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 2
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description 2
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $2.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 3
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $3.50
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 4
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 5
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 6
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 7
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 8
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 9
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="prod-grid-item">
+                        <div class="prod-grid-item-image">
+                            <img src="http://placehold.it/220x220">
+                        </div>
+                        <div class="prod-grid-item-info">
+                            <div class="prod-grid-item-info-main">
+                                Product Name 10
+                            </div>
+                            <div class="prod-grid-item-info-description">
+                                Product Description
+                            </div>
+                            <div class="prod-grid-item-info-price">
+                                $0.00
+                            </div>
+                            <button class="prod-grid-item-primary" type="button">Add to Cart</button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- END GRID -->
+            </div>
+
+
+
+
+        </div>
+<!-- END CONTAINER -->
+</div>
+
+
+        <hr>
+        <script type="text/javascript" src="js/product-listing-page.js"></script>
 </body>
 
 </html>
