@@ -19,6 +19,7 @@
 .flexy-grid {
   display: flex;
   box-sizing: border-box;
+  flex-direction: row;
 }
 
 /* Columns */
