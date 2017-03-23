@@ -20,35 +20,22 @@ ul {
 
 /*Page Nav*/
 
-.page-nav__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 20px;
-  width: 100%;
+
+.page-nav__item {
+  margin-left: .5em;
+  margin-right: .5em;
 }
 
-.page-nav__items {
-  display: flex;
-  justify-content: flex-start;
-  border: 1px solid black;
-}
-
-.page-nav__items>li {
-  padding: 10px;
-}
 
 .shopping-cart-list {
-  border: 1px solid black;
-  padding: 10px;
+
 }
 
 
 
 /*Sidebar*/
 
-.sidebar-container {
+.sidebar {
     background: #fff;
     left: 9px;
     padding-left: 28px;

@@ -12,21 +12,34 @@
 
 <body>
 
-    <!----------------------Page Navigation----------------------->
+<div class="flexy-container">
 
-    <div class=page-nav__container>
-      <ul class="page-nav__items">
-        <li>Menu 1</li>
-        <li>Menu 2</li>
-        <li>Menu 3</li>
-        <li>Menu 4</li>
-      </ul>
-      <div class="shopping-cart-list">Shopping Cart</div>
-    </div>
+
+    <!----------------------Page Navigation----------------------->
+    <nav class="flexy-grid flexy-between">
+        <div class="flexy-col">
+            <ul class="flexy-grid">
+                <li class="page-nav__item">Menu 1</li>
+                <li class="page-nav__item">Menu 2</li>
+                <li class="page-nav__item">Menu 3</li>
+                <li class="page-nav__item">Menu 4</li>
+            </ul>
+        </div>
+        <div class="flexy-col shopping-cart-list">Shopping Cart</div>
+    </nav>
+
+
+
+
+ <!-- END CONTAINER -->
+</div>
+
+
+
 
 
     <!----------------------Active Shopping Cart----------------------->
-
+    <!-- @TODO -- adapt the shopping-cart -->
 
     <div class="shopping-cart-wrapper toggle-visibility">
         <div class="shopping-cart-header">
@@ -72,7 +85,7 @@
 
             <!----------------------Nav and Filter Sidebar--------------------->
 
-            <div class="sidebar-container">
+            <div class="sidebar">
                 <div class="prod-grid-filters">
                     <h2>FILTER</h2>
                     <ul>
