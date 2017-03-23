@@ -1,0 +1,174 @@
+/*
+* Flexy
+* Copyright 2017, Carlos Astrada
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/*@TODO - Flesh out using https://github.com/dhg/Skeleton as inspiration*/
+/* Container and Grid */
+
+.flexy-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1140px;
+    box-sizing: border-box;
+}
+
+.flexy-grid {
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Columns */
+.flexy-col {
+  background-color: skyblue;
+  color: rgba(57, 21, 21, 1);
+  padding: 20px;
+  margin: 1em;
+}
+
+.flexy-1 {
+  flex-basis: 8.3333333%;
+}
+
+.flexy-2 {
+  flex-basis: 16.66666%;
+}
+
+.flexy-3 {
+  flex-basis: 25%;
+}
+
+.flexy-4 {
+  flex-basis: 33.333333%;
+}
+
+.flexy-5 {
+  flex-basis: 41.6666665%;
+}
+
+.flexy-6 {
+  flex-basis: 50%;
+}
+
+.flexy-7 {
+  flex-basis: 58.3333337%;
+}
+
+.flexy-8 {
+  flex-basis: 66.6666667%;
+}
+
+.flexy-9 {
+  flex-basis: 75%;
+}
+
+.flexy-10 {
+  flex-basis: 83.3333334%;
+}
+
+.flexy-11 {
+  flex-basis: 91.666667%;
+}
+
+.flexy-12 {
+  flex-basis: 100%;
+}
+
+
+/* Modifiers */
+.flexy-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flexy-grow {
+  flex-grow: 1;
+}
+
+.flexy-grow-2x {
+  flex-grow: 2;
+}
+
+.flexy-grow-3x {
+  flex-grow: 3;
+}
+
+.flexy-w25 {
+  width: 25%;
+}
+
+.flexy-w33 {
+  width: 33%;
+}
+
+.flexy-w50 {
+  width: 50%;
+}
+
+.flexy-w75 {
+  width: 75%;
+}
+
+.flexy-start {
+  justify-content: flex-start;
+}
+
+.flexy-center {
+  justify-content: center;
+}
+
+.flexy-end {
+  justify-content: flex-end;
+}
+
+.flexy-between {
+  justify-content: space-between;
+}
+
+.flexy-around {
+  justify-content: space-around;
+}
+
+.flexy-middle {
+  align-items: center;
+}
+
+.flexy-reverse {
+  flex-direction: row-reverse;
+}
+
+.flexy-col {
+  flex-direction: column;
+}
+
+.flexy-col-reverse {
+  flex-direction: column-reverse;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 400px) {
+  .flexy-grid {
+    display: block;
+  }
+}
+
+/* Mobile first queries @TODO flesh out media queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

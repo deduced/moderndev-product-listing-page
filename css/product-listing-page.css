@@ -1,6 +1,8 @@
 @import url("reset.css");
 @import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab';
 
+/* @TODO use a flexbox grid  */
+
 * {
     box-sizing: border-box;
 }
